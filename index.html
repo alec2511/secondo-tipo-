@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+      
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="https://unpkg.com/vue-router@4.0.5/dist/vue-router.global.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        
+        <body>
+            <div class="sfondo">
+            <div id="app">
+                <H1 class="titolo">CATALOGO FILM</H1>
+               
+                <nav class="navbar navbar-light" class="ricerca">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" class="CER">Cerca</button>
+                    </form>
+                  </nav>
+                  
+                  <br>
+
+                  <div class="row">
+                    <div class="col-sm-3" v-for="movie in movies">
+
+                   
+                      <div class="card" style="background: black;">
+                          <img :src="image_path(movie.poster_path)" class="imm">
+                          <router-link to="/" class="pagF">Pagina film</router-link>
+                        <div class="card-body" class="boh">
+                          <h5 class="card-title">{{movie.name}}</h5>
+
+                          <h5 class="prop">POPULARITY:</h5>
+                          <h5 class="prop2" class="card-title">{{movie.popularity}}</h5>
+
+                          <h5 class="prop">ORIGINAL LANGUAGE:</h5>
+                          <h5 class="prop2" class="card-title">{{movie.original_language}}</h5>
+
+                          <h5 class="prop">RELEASE DATE :</h5>
+                          <h5 class="prop2" class="card-title">{{movie.first_air_date}}</h5>
+
+                          <h5 class="prop">VOTE AVERAGE:</h5>
+                          <h5 class="prop2" class="card-title">{{movie.vote_average}}</h5>
+                          <div class="accordion" id="accordionExample" v-if="movie.overview!=''" style="background-color: black;">
+
+                           
+                            <div v-if=" movie.overview!='' ">
+                            <h5 class="prop">OVERVIEW:</h5>
+                            <h5 class="prop2" class="card-title">{{movie.overview}}</h5>
+                          </div>
+
+                       
+
+                          <p class="card-text"></p>
+                         
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+                 </div>
+                 <button type="button" class="btn-lg btn-block"  v-on:click="newGP()" class="bottone" style="background-color: black; color: blueviolet;  font-size: 30px; ;
+                 font-family: 'Monoton', cursive;">carica altri</button>
+                  <div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status">
+                  <span class="visually-hidden rotellina">altro</span>
+         </div>
+          </div>
+                  </div>
+               </div>
+
+           </div>
+           </div>
+           
+           <script src="./film.js"></script> 
+
+
+          
+
+           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+       </body>
+       
+        
+    </head>
+</html>  

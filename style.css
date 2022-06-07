@@ -1,0 +1,65 @@
+
+.titolo{
+    color: blueviolet;
+    size: 40px;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+}
+.botRic{
+    color: darkmagenta;
+}
+.sfondo{
+    background-color: black;
+}
+.film{
+    color: blueviolet;
+}
+.nav{
+    background-color: black;
+}
+.pos {
+    text-align: center;
+}
+.n{
+    color:blueviolet;
+    text-align: center;
+}
+H5{
+    text-align: center;
+    color: blueviolet;
+}
+.clicca{
+    background-color: white;
+    color: blueviolet;
+    text-align: center;
+    left:22.5;
+    right:22.5;
+}
+.imm:hover{
+   
+      opacity: 0.6;
+      border-radius: 100px 100px 100px 100px;       
+    
+}
+.ricerca{
+    background-color: black;
+}
+.prop{
+    color: blueviolet;
+}
+.prop2{
+    color: white;
+    font-size: 15px;
+}
+.rotellina{
+    display: none;
+}
+.pagF{
+
+    text-align: center;
+}
+.CER{
+    background-color: white;
+    color: blueviolet;
+}
+
